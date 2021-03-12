@@ -10,7 +10,7 @@ class App extends React.Component {
           sentimentOutput:[],
           sentiment:true
         }
-  
+
   renderTextArea = ()=>{
     document.getElementById("textinput").value = "";
     if(this.state.mode === "url") {
@@ -19,7 +19,7 @@ class App extends React.Component {
       sentimentOutput:[],
       sentiment:true
     })
-    } 
+    }
   }
 
   renderTextBox = ()=>{
@@ -76,10 +76,10 @@ class App extends React.Component {
       this.setState({sentimentOutput:<EmotionTable emotions={response.data}/>});
   });
   }
-  
+
 
   render() {
-    return (  
+    return (
       <div className="App">
       <button className="btn btn-info" onClick={this.renderTextArea}>Text</button>
         <button className="btn btn-dark"  onClick={this.renderTextBox}>URL</button>
